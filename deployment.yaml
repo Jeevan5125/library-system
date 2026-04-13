@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: java-test-app-deployment
+  name: library-system-deployment
   labels:
-    app: java-test-app
+    app: library-system
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: java-test-app
+      app: library-system
   template:
     metadata:
       labels:
-        app: java-test-app
+        app: jlibrary-system
     spec:
       containers:
-        - name: java-test-app
-          image: jeevan5125/java-test-app:latest
+        - name: library-system
+          image: jeevan5125/library-system:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -41,11 +41,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: java-test-app-service
+  name: library-system-service
 spec:
   type: NodePort
   selector:
-    app: java-test-app
+    app: library-system
   ports:
     - protocol: TCP
       port: 80

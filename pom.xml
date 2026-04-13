@@ -7,7 +7,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <artifactId>test-java-app</artifactId> 
 <version>1.0</version> 
 <packaging>jar</packaging> 
-<name>test-java-app</name> 
+<name>library-system</name> 
 <properties> 
 <maven.compiler.source>21</maven.compiler.source> 
 <maven.compiler.target>21</maven.compiler.target> 
