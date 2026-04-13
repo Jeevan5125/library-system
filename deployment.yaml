@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: jlibrary-system
+        app: library-system
     spec:
       containers:
         - name: library-system
